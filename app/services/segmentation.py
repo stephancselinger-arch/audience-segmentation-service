@@ -107,11 +107,12 @@ def ingest_events(events: list[UserEvent]) -> int:
 
 def get_user_events(user_id: str, lookback_days: int = 30) -> list[UserEvent]:
     cutoff = _now() - timedelta(days=lookback_days)
-    return [
-        ev for ev in _events.get(user_id, [])
-        if ev.timestamp.replace(tzinfo=timezone.utc) >= cutoff
-        if ev.timestamp.tzinfo else ev.timestamp >= cutoff.replace(tzinfo=None)
-    ]
+    results = []
+    for ev in _events.get(user_id, []):
+        ts = ev.timestamp.replace(tzinfo=timezone.utc) if not ev.timestamp.tzinfo else ev.timestamp
+        if ts >= cutoff:
+            results.append(ev)
+    return results
 
 
 # ── Rule Evaluation ───────────────────────────────────────────────────────────

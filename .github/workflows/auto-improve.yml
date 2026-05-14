@@ -1,0 +1,45 @@
+name: Auto Improve
+
+on:
+  schedule:
+    - cron: '0 9 1-31/2 * *'  # Offset by 1 day from creative-trafficking-api
+  workflow_dispatch:
+
+jobs:
+  improve:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        env:
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+      - uses: actions/setup-python@v5
+        env:
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: pytest tests/ -v
+
+      - name: Bump patch version in README
+        run: |
+          DATE=$(date +%Y-%m-%d)
+          sed -i "s/Last updated: .*/Last updated: $DATE/" README.md || \
+          echo "" >> README.md && echo "<!-- Last updated: $DATE -->" >> README.md
+
+      - name: Commit if changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "chore: automated maintenance $(date +%Y-%m-%d)"
+
+      - name: Push
+        run: git push

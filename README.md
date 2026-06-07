@@ -123,14 +123,15 @@ pytest tests/ -v
 - **Pydantic v2** — data validation
 - **K-Means** — pure-Python lookalike modeling (drop-in scikit-learn for production)
 - Python 3.12+
-<!-- Last updated: 2026-06-05
-<!-- Last updated: 2026-06-05
-<!-- Last updated: 2026-06-05
-<!-- Last updated: 2026-06-05
-<!-- Last updated: 2026-06-05
-<!-- Last updated: 2026-06-05
-<!-- Last updated: 2026-06-05
-<!-- Last updated: 2026-06-05
-<!-- Last updated: 2026-06-05
-<!-- Last updated: 2026-06-05
-<!-- Last updated: 2026-06-05 -->
+<!-- Last updated: 2026-06-07
+<!-- Last updated: 2026-06-07
+<!-- Last updated: 2026-06-07
+<!-- Last updated: 2026-06-07
+<!-- Last updated: 2026-06-07
+<!-- Last updated: 2026-06-07
+<!-- Last updated: 2026-06-07
+<!-- Last updated: 2026-06-07
+<!-- Last updated: 2026-06-07
+<!-- Last updated: 2026-06-07
+<!-- Last updated: 2026-06-07
+<!-- Last updated: 2026-06-07 -->

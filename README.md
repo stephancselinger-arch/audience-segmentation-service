@@ -123,23 +123,24 @@ pytest tests/ -v
 - **Pydantic v2** — data validation
 - **K-Means** — pure-Python lookalike modeling (drop-in scikit-learn for production)
 - Python 3.12+
-<!-- Last updated: 2026-06-23
-<!-- Last updated: 2026-06-23
-<!-- Last updated: 2026-06-23
-<!-- Last updated: 2026-06-23
-<!-- Last updated: 2026-06-23
-<!-- Last updated: 2026-06-23
-<!-- Last updated: 2026-06-23
-<!-- Last updated: 2026-06-23
-<!-- Last updated: 2026-06-23
-<!-- Last updated: 2026-06-23
-<!-- Last updated: 2026-06-23
-<!-- Last updated: 2026-06-23
-<!-- Last updated: 2026-06-23
-<!-- Last updated: 2026-06-23
-<!-- Last updated: 2026-06-23
-<!-- Last updated: 2026-06-23
-<!-- Last updated: 2026-06-23
-<!-- Last updated: 2026-06-23
-<!-- Last updated: 2026-06-23
-<!-- Last updated: 2026-06-23 -->
+<!-- Last updated: 2026-06-25
+<!-- Last updated: 2026-06-25
+<!-- Last updated: 2026-06-25
+<!-- Last updated: 2026-06-25
+<!-- Last updated: 2026-06-25
+<!-- Last updated: 2026-06-25
+<!-- Last updated: 2026-06-25
+<!-- Last updated: 2026-06-25
+<!-- Last updated: 2026-06-25
+<!-- Last updated: 2026-06-25
+<!-- Last updated: 2026-06-25
+<!-- Last updated: 2026-06-25
+<!-- Last updated: 2026-06-25
+<!-- Last updated: 2026-06-25
+<!-- Last updated: 2026-06-25
+<!-- Last updated: 2026-06-25
+<!-- Last updated: 2026-06-25
+<!-- Last updated: 2026-06-25
+<!-- Last updated: 2026-06-25
+<!-- Last updated: 2026-06-25
+<!-- Last updated: 2026-06-25 -->
